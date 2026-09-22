@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JadronX Studio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080b12;
+            color: white;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(8, 11, 18, 0.95);
+            border-bottom: 1px solid #263040;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #00d9ff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #00d9ff;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+
+            background:
+                radial-gradient(circle at center, #123247 0%, #080b12 60%);
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #00d9ff;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #aab2c0;
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        .boton {
+            display: inline-block;
+            background: #00d9ff;
+            color: #031016;
+            padding: 15px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            transform: translateY(-3px);
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 20px;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 45px;
+        }
+
+        .servicios {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #111722;
+            border: 1px solid #273244;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .card h3 {
+            color: #00d9ff;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #aab2c0;
+            line-height: 1.6;
+        }
+
+        .precio {
+            display: block;
+            margin-top: 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .trabajos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .trabajo {
+            height: 250px;
+            background: #111722;
+            border: 1px solid #273244;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #707a8a;
+            font-size: 22px;
+        }
+
+        .contacto {
+            text-align: center;
+            max-width: none;
+            background: #0d121c;
+        }
+
+        .contacto p {
+            color: #aab2c0;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #697180;
+            border-top: 1px solid #202838;
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .servicios,
+            .trabajos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">JadronX Studio</div>
+
+            <div>
+                <a href="#servicios">Servicios</a>
+                <a href="#trabajos">Trabajos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+
+        <div>
+            <h1>
+                JadronX <span>Studio</span>
+            </h1>
+
+            <p>
+                Edición de vídeo para gaming, YouTube y redes sociales.
+                Convierte tus clips en vídeos que llamen la atención.
+            </p>
+
+            <a href="#contacto" class="boton">
+                Quiero editar mi vídeo
+            </a>
+        </div>
+
+    </section>
+
+    <section id="servicios">
+
+        <h2 class="titulo">Mis servicios</h2>
+
+        <div class="servicios">
+
+            <div class="card">
+                <h3>🎮 Gaming</h3>
+                <p>
+                    Edición de partidas, mejores momentos,
+                    jugadas y montajes.
+                </p>
+                <span class="precio">Desde 5 €</span>
+            </div>
+
+            <div class="card">
+                <h3>📱 Shorts</h3>
+                <p>
+                    Vídeos cortos para YouTube Shorts,
+                    TikTok e Instagram.
+                </p>
+                <span class="precio">Desde 3 €</span>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Montajes</h3>
+                <p>
+                    Música, efectos, zooms, cámara lenta,
+                    transiciones y sincronización.
+                </p>
+                <span class="precio">Desde 8 €</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="trabajos">
+
+        <h2 class="titulo">Mis trabajos</h2>
+
+        <div class="trabajos">
+
+            <div class="trabajo">
+                🎬<br>
+                Tu vídeo aquí
+            </div>
+
+            <div class="trabajo">
+                🎮<br>
+                Tu vídeo aquí
+            </div>
+
+            <div class="trabajo">
+                🔥<br>
+                Tu vídeo aquí
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contacto" class="contacto">
+
+        <h2 class="titulo">
+            ¿Quieres editar un vídeo?
+        </h2>
+
+        <p>
+            Cuéntame qué vídeo quieres editar y vemos cómo hacerlo.
+        </p>
+
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jadronxstudio@gmail.com" 
+   class="boton" 
+   target="_blank">
+    Contactar por email
+</a>
+    </section>
+
+    <footer>
+        © 2026 JadronX Studio
+    </footer>
+
+</body>
+
+</html>
